@@ -9,38 +9,138 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ParamedicalRouteImport } from './routes/paramedical'
+import { Route as CoursesRouteImport } from './routes/courses'
+import { Route as AcademyProgramsRouteImport } from './routes/academy-programs'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ParamedicalSlugRouteImport } from './routes/paramedical.$slug'
+import { Route as CoursesSlugRouteImport } from './routes/courses.$slug'
+import { Route as AcademyProgramsSlugRouteImport } from './routes/academy-programs.$slug'
 
+const ParamedicalRoute = ParamedicalRouteImport.update({
+  id: '/paramedical',
+  path: '/paramedical',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CoursesRoute = CoursesRouteImport.update({
+  id: '/courses',
+  path: '/courses',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AcademyProgramsRoute = AcademyProgramsRouteImport.update({
+  id: '/academy-programs',
+  path: '/academy-programs',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ParamedicalSlugRoute = ParamedicalSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => ParamedicalRoute,
+} as any)
+const CoursesSlugRoute = CoursesSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => CoursesRoute,
+} as any)
+const AcademyProgramsSlugRoute = AcademyProgramsSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => AcademyProgramsRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/academy-programs': typeof AcademyProgramsRouteWithChildren
+  '/courses': typeof CoursesRouteWithChildren
+  '/paramedical': typeof ParamedicalRouteWithChildren
+  '/academy-programs/$slug': typeof AcademyProgramsSlugRoute
+  '/courses/$slug': typeof CoursesSlugRoute
+  '/paramedical/$slug': typeof ParamedicalSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/academy-programs': typeof AcademyProgramsRouteWithChildren
+  '/courses': typeof CoursesRouteWithChildren
+  '/paramedical': typeof ParamedicalRouteWithChildren
+  '/academy-programs/$slug': typeof AcademyProgramsSlugRoute
+  '/courses/$slug': typeof CoursesSlugRoute
+  '/paramedical/$slug': typeof ParamedicalSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/academy-programs': typeof AcademyProgramsRouteWithChildren
+  '/courses': typeof CoursesRouteWithChildren
+  '/paramedical': typeof ParamedicalRouteWithChildren
+  '/academy-programs/$slug': typeof AcademyProgramsSlugRoute
+  '/courses/$slug': typeof CoursesSlugRoute
+  '/paramedical/$slug': typeof ParamedicalSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/academy-programs'
+    | '/courses'
+    | '/paramedical'
+    | '/academy-programs/$slug'
+    | '/courses/$slug'
+    | '/paramedical/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/academy-programs'
+    | '/courses'
+    | '/paramedical'
+    | '/academy-programs/$slug'
+    | '/courses/$slug'
+    | '/paramedical/$slug'
+  id:
+    | '__root__'
+    | '/'
+    | '/academy-programs'
+    | '/courses'
+    | '/paramedical'
+    | '/academy-programs/$slug'
+    | '/courses/$slug'
+    | '/paramedical/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AcademyProgramsRoute: typeof AcademyProgramsRouteWithChildren
+  CoursesRoute: typeof CoursesRouteWithChildren
+  ParamedicalRoute: typeof ParamedicalRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/paramedical': {
+      id: '/paramedical'
+      path: '/paramedical'
+      fullPath: '/paramedical'
+      preLoaderRoute: typeof ParamedicalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/courses': {
+      id: '/courses'
+      path: '/courses'
+      fullPath: '/courses'
+      preLoaderRoute: typeof CoursesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/academy-programs': {
+      id: '/academy-programs'
+      path: '/academy-programs'
+      fullPath: '/academy-programs'
+      preLoaderRoute: typeof AcademyProgramsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,11 +148,70 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/paramedical/$slug': {
+      id: '/paramedical/$slug'
+      path: '/$slug'
+      fullPath: '/paramedical/$slug'
+      preLoaderRoute: typeof ParamedicalSlugRouteImport
+      parentRoute: typeof ParamedicalRoute
+    }
+    '/courses/$slug': {
+      id: '/courses/$slug'
+      path: '/$slug'
+      fullPath: '/courses/$slug'
+      preLoaderRoute: typeof CoursesSlugRouteImport
+      parentRoute: typeof CoursesRoute
+    }
+    '/academy-programs/$slug': {
+      id: '/academy-programs/$slug'
+      path: '/$slug'
+      fullPath: '/academy-programs/$slug'
+      preLoaderRoute: typeof AcademyProgramsSlugRouteImport
+      parentRoute: typeof AcademyProgramsRoute
+    }
   }
 }
 
+interface AcademyProgramsRouteChildren {
+  AcademyProgramsSlugRoute: typeof AcademyProgramsSlugRoute
+}
+
+const AcademyProgramsRouteChildren: AcademyProgramsRouteChildren = {
+  AcademyProgramsSlugRoute: AcademyProgramsSlugRoute,
+}
+
+const AcademyProgramsRouteWithChildren = AcademyProgramsRoute._addFileChildren(
+  AcademyProgramsRouteChildren,
+)
+
+interface CoursesRouteChildren {
+  CoursesSlugRoute: typeof CoursesSlugRoute
+}
+
+const CoursesRouteChildren: CoursesRouteChildren = {
+  CoursesSlugRoute: CoursesSlugRoute,
+}
+
+const CoursesRouteWithChildren =
+  CoursesRoute._addFileChildren(CoursesRouteChildren)
+
+interface ParamedicalRouteChildren {
+  ParamedicalSlugRoute: typeof ParamedicalSlugRoute
+}
+
+const ParamedicalRouteChildren: ParamedicalRouteChildren = {
+  ParamedicalSlugRoute: ParamedicalSlugRoute,
+}
+
+const ParamedicalRouteWithChildren = ParamedicalRoute._addFileChildren(
+  ParamedicalRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AcademyProgramsRoute: AcademyProgramsRouteWithChildren,
+  CoursesRoute: CoursesRouteWithChildren,
+  ParamedicalRoute: ParamedicalRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
