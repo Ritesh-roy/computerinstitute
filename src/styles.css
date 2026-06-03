@@ -59,24 +59,34 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --color-primary-glow: var(--primary-glow);
+  --color-accent-orange: var(--accent-orange);
+  --color-whatsapp: var(--whatsapp);
+  --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
+  --radius: 0.75rem;
+  /* Brand palette: deep navy blue + premium gold (from SK Institute logo) */
+  --background: oklch(0.99 0.006 255);
+  --foreground: oklch(0.24 0.06 262);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
+  --card-foreground: oklch(0.24 0.06 262);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
+  --popover-foreground: oklch(0.24 0.06 262);
+  --primary: oklch(0.32 0.085 262);
+  --primary-foreground: oklch(0.99 0.005 255);
+  --primary-glow: oklch(0.74 0.13 85);
+  --accent-orange: oklch(0.74 0.13 85);
+  --gold: oklch(0.74 0.13 85);
+  --whatsapp: oklch(0.65 0.17 150);
+  --secondary: oklch(0.96 0.012 255);
+  --secondary-foreground: oklch(0.28 0.07 262);
+  --muted: oklch(0.96 0.01 255);
+  --muted-foreground: oklch(0.48 0.03 262);
+  --accent: oklch(0.93 0.04 90);
+  --accent-foreground: oklch(0.28 0.07 262);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
   --border: oklch(0.929 0.013 255.508);
@@ -137,8 +147,93 @@
     border-color: var(--color-border);
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
   }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+@utility hero-gradient {
+  background-image: linear-gradient(135deg, color-mix(in oklab, var(--primary) 88%, black) 0%, color-mix(in oklab, var(--primary-glow) 80%, transparent) 100%);
+}
+
+@utility soft-shadow {
+  box-shadow: 0 10px 30px -12px color-mix(in oklab, var(--primary) 25%, transparent);
+}
+
+@keyframes gentle-pulse {
+  0%, 100% { opacity: 0.88; transform: translateY(0); }
+  50% { opacity: 1; transform: translateY(-3px); }
+}
+
+.shimmer-card {
+  position: relative;
+  isolation: isolate;
+}
+
+.shimmer-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(120deg, transparent 0%, color-mix(in oklab, var(--primary) 10%, transparent) 35%, transparent 65%);
+  opacity: 0;
+  transition: opacity 0.45s ease;
+  z-index: -1;
+}
+
+.shimmer-card:hover::before {
+  opacity: 1;
+}
+
+/* Global image hover polish */
+img {
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), filter 0.4s ease;
+}
+.img-hover-wrap { overflow: hidden; }
+.img-hover-wrap:hover > img { transform: scale(1.05); filter: brightness(1.06) saturate(1.05); }
+
+.loading-glow {
+  animation: gentle-pulse 2.6s ease-in-out infinite;
+}
+
+/* Floating blobs */
+@keyframes float-slow {
+  0%, 100% { transform: translate(0,0) scale(1); }
+  50% { transform: translate(20px,-30px) scale(1.08); }
+}
+.animate-float-slow { animation: float-slow 12s ease-in-out infinite; }
+.animate-float-slower { animation: float-slow 18s ease-in-out infinite; }
+
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fade-in-up 0.6s ease-out both;
+}
+
+@keyframes loadbar {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(220%); }
+}
+
+@utility text-gold {
+  color: var(--gold);
+}
+
+/* Overflow fix */
+body {
+  overflow-x: hidden;
 }
