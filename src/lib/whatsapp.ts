@@ -16,18 +16,31 @@ export type AdmissionLead = {
   city: string;
 };
 
+/** Current date & time in a readable IST-friendly format. */
+function nowStamp(): string {
+  try {
+    return new Date().toLocaleString("en-IN", {
+      dateStyle: "medium",
+      timeStyle: "short",
+    });
+  } catch {
+    return new Date().toLocaleString();
+  }
+}
+
 /** Build the wa.me URL for an admission form submission. */
 export function admissionWhatsappUrl(lead: AdmissionLead): string {
   const message = [
-    "New Admission Inquiry",
+    "🎓 New Admission Inquiry",
     "",
     `Course: ${lead.course}`,
     `Name: ${lead.name}`,
     `Mobile: ${lead.mobile}`,
     `Email: ${lead.email}`,
     `City: ${lead.city}`,
+    `Date & Time: ${nowStamp()}`,
     "",
-    "Source: Website Admission Form",
+    "Submitted from SK Institute Website",
   ].join("\n");
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }
@@ -35,11 +48,12 @@ export function admissionWhatsappUrl(lead: AdmissionLead): string {
 /** Build the wa.me URL for an "Apply on WhatsApp" course button. */
 export function courseWhatsappUrl(courseTitle: string): string {
   const message = [
-    "New Admission Inquiry",
+    "🎓 New Admission Inquiry",
     "",
     `Course: ${courseTitle}`,
+    `Date & Time: ${nowStamp()}`,
     "",
-    "Source: Website Course Page",
+    "Submitted from SK Institute Website",
   ].join("\n");
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }
