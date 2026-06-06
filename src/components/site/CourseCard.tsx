@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, GraduationCap, Stethoscope, Monitor } from "lucide-react";
 import type { Course } from "@/data/courses";
+import { getFallbackImage } from "@/data/courseImages";
 import { useT } from "@/lib/i18n";
 
 const iconFor = (c: Course["category"]) =>
