@@ -16,7 +16,24 @@ export const Route = createFileRoute("/academy-programs/$slug")({
           { property: "og:title", content: `${loaderData.course.title} — SK Institute` },
           { property: "og:description", content: loaderData.course.description.slice(0, 150) },
           { property: "og:image", content: loaderData.course.image },
+          { property: "og:type", content: "article" },
         ]
+      : [],
+    links: loaderData
+      ? [{ rel: "canonical", href: `https://sk-institute-quest.lovable.app/academy-programs/${loaderData.course.id}` }]
+      : [],
+    scripts: loaderData
+      ? [{
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Course",
+            name: loaderData.course.title,
+            description: loaderData.course.description,
+            provider: { "@type": "Organization", name: "SK Institute", sameAs: "https://sk-institute-quest.lovable.app" },
+            timeRequired: loaderData.course.duration,
+          }),
+        }]
       : [],
   }),
   notFoundComponent: () => <div className="py-20 text-center"><h1 className="text-3xl font-bold">Program not found</h1></div>,
