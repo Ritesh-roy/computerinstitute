@@ -50,7 +50,7 @@ export function CourseCard({ course }: { course: Course }) {
           </div>
         </div>
 
-        <div className="relative mt-4 flex flex-col gap-3">
+        <div className="relative mt-4 flex flex-1 flex-col gap-3">
           <p className="line-clamp-2 text-sm text-muted-foreground">{course.description}</p>
           <div className="flex flex-wrap gap-2">
             {course.syllabus.slice(0, 2).map((s) => (
@@ -59,7 +59,7 @@ export function CourseCard({ course }: { course: Course }) {
               </span>
             ))}
           </div>
-          <div className="mt-1 flex items-center justify-between gap-3">
+          <div className="mt-auto flex items-center justify-between gap-3 pt-1">
             <span className="text-xs text-muted-foreground">{t("courses.eligibility")}: {course.eligibility}</span>
             <span className="inline-flex items-center gap-1 text-sm font-semibold text-primary transition-all group-hover:gap-2">
               {t("courses.viewDetails")} <ArrowRight className="h-3.5 w-3.5" />
