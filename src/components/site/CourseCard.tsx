@@ -23,9 +23,9 @@ export function CourseCard({ course }: { course: Course }) {
       to={routeFor(course.category)}
       params={{ slug: course.id }}
       preload="intent"
-      className="group block"
+      className="group block h-full"
     >
-      <article className="relative h-full overflow-hidden rounded-2xl border border-border bg-card/90 p-4 text-left backdrop-blur-sm transition-all duration-500 hover:-translate-y-1.5 hover:border-primary/45 hover:shadow-[0_20px_60px_-30px_color-mix(in_oklab,var(--primary)_40%,transparent)] sm:p-5">
+      <article className="relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card/90 p-4 text-left backdrop-blur-sm transition-all duration-500 hover:-translate-y-1.5 hover:border-primary/45 hover:shadow-[0_20px_60px_-30px_color-mix(in_oklab,var(--primary)_40%,transparent)] sm:p-5">
         <div className="relative overflow-hidden rounded-xl border border-border/60 bg-secondary/35 aspect-[16/10] img-hover-wrap">
           <img
             src={course.image}
