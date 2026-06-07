@@ -35,81 +35,94 @@ export function Navbar() {
         scrolled ? "bg-background/85 backdrop-blur-md border-b border-border soft-shadow" : "bg-background/60 backdrop-blur"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 lg:px-8">
-        <Logo />
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-3 px-4 lg:px-8">
+        {/* Logo */}
+        <div className="flex shrink-0 items-center">
+          <Logo />
+        </div>
 
-        <nav className="hidden xl:flex items-center gap-7">
+        {/* Desktop nav */}
+        <nav className="hidden xl:flex flex-1 items-center justify-center gap-5 2xl:gap-7">
           {links.map((l) => (
             <Link
               key={l.to}
               to={l.to}
               activeOptions={{ exact: l.to === "/" }}
-              className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors relative after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full data-[status=active]:text-primary data-[status=active]:after:w-full"
+              className="whitespace-nowrap text-sm font-medium text-foreground/80 hover:text-primary transition-colors relative after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full data-[status=active]:text-primary data-[status=active]:after:w-full"
             >
               {l.label}
             </Link>
           ))}
         </nav>
 
-        <div className="hidden md:flex items-center gap-2">
+        {/* Desktop CTAs */}
+        <div className="hidden xl:flex shrink-0 items-center gap-2">
           <LanguageSwitcher />
           <a
             href={whatsappChatUrl()}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-1.5 rounded-full bg-whatsapp px-4 py-2 text-sm font-semibold text-white hover:opacity-90 transition"
+            className="inline-flex items-center gap-1.5 whitespace-nowrap rounded-full bg-whatsapp px-4 py-2 text-sm font-semibold text-white hover:opacity-90 transition"
           >
             <MessageCircle className="h-4 w-4" /> {t("nav.whatsapp")}
           </a>
           <button
             onClick={openAdmission}
-            className="rounded-full hero-gradient px-5 py-2 text-sm font-semibold text-primary-foreground hover:scale-[1.03] transition-transform soft-shadow"
+            className="whitespace-nowrap rounded-full hero-gradient px-5 py-2 text-sm font-semibold text-primary-foreground hover:scale-[1.03] transition-transform soft-shadow"
           >
             {t("nav.apply")}
           </button>
         </div>
 
-        <div className="flex items-center gap-2 xl:hidden">
+        {/* Mobile / tablet controls */}
+        <div className="flex shrink-0 items-center gap-2 xl:hidden">
           <LanguageSwitcher className="hidden sm:inline-flex" />
-          <button
-            className="md:hidden p-2 rounded-md text-foreground"
-            onClick={() => setOpen((v) => !v)}
-            aria-label="Menu"
+          <a
+            href={whatsappChatUrl()}
+            target="_blank"
+            rel="noreferrer"
+            className="hidden sm:inline-flex items-center gap-1.5 whitespace-nowrap rounded-full bg-whatsapp px-3.5 py-2 text-sm font-semibold text-white hover:opacity-90 transition"
           >
-            {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
+            <MessageCircle className="h-4 w-4" /> {t("nav.whatsapp")}
+          </a>
           <button
-            className="hidden md:flex xl:hidden p-2 rounded-md text-foreground"
+            className="p-2 rounded-md text-foreground hover:bg-secondary transition"
             onClick={() => setOpen((v) => !v)}
             aria-label="Menu"
+            aria-expanded={open}
           >
             {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
       </div>
 
-      {open && (
-        <div className="xl:hidden border-t border-border bg-background">
-          <div className="px-4 py-4 flex flex-col gap-3">
-            {links.map((l) => (
-              <Link
-                key={l.to}
-                to={l.to}
-                activeOptions={{ exact: l.to === "/" }}
-                onClick={() => setOpen(false)}
-                className="text-sm font-medium text-foreground/85 py-1.5 data-[status=active]:text-primary"
-              >
-                {l.label}
-              </Link>
-            ))}
-            <div className="sm:hidden pt-1">
-              <LanguageSwitcher />
-            </div>
+      {/* Mobile / tablet menu */}
+      <div
+        className={`xl:hidden overflow-hidden border-t border-border bg-background transition-[max-height,opacity] duration-300 ease-out ${
+          open ? "max-h-[640px] opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="px-4 py-4 flex flex-col gap-1">
+          {links.map((l) => (
+            <Link
+              key={l.to}
+              to={l.to}
+              activeOptions={{ exact: l.to === "/" }}
+              onClick={() => setOpen(false)}
+              className="rounded-lg px-3 py-2.5 text-sm font-medium text-foreground/85 hover:bg-secondary hover:text-primary transition data-[status=active]:text-primary data-[status=active]:bg-secondary"
+            >
+              {l.label}
+            </Link>
+          ))}
+          <div className="sm:hidden pt-2">
+            <LanguageSwitcher />
+          </div>
+          <div className="mt-2 flex flex-col gap-2">
             <a
               href={whatsappChatUrl()}
               target="_blank"
               rel="noreferrer"
-              className="mt-1 inline-flex items-center justify-center gap-1.5 rounded-full bg-whatsapp px-5 py-2.5 text-sm font-semibold text-white"
+              className="inline-flex items-center justify-center gap-1.5 rounded-full bg-whatsapp px-5 py-2.5 text-sm font-semibold text-white"
             >
               <MessageCircle className="h-4 w-4" /> {t("nav.whatsapp")}
             </a>
@@ -124,7 +137,7 @@ export function Navbar() {
             </button>
           </div>
         </div>
-      )}
+      </div>
     </header>
   );
 }
