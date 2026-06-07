@@ -42,7 +42,7 @@ export function Navbar() {
         </div>
 
         {/* Desktop nav */}
-        <nav className="hidden xl:flex flex-1 items-center justify-center gap-5 2xl:gap-7">
+        <nav className="hidden xl:flex flex-1 items-center justify-center gap-4 2xl:gap-7">
           {links.map((l) => (
             <Link
               key={l.to}
@@ -62,13 +62,13 @@ export function Navbar() {
             href={whatsappChatUrl()}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-1.5 whitespace-nowrap rounded-full bg-whatsapp px-4 py-2 text-sm font-semibold text-white hover:opacity-90 transition"
+            className="inline-flex items-center gap-1.5 whitespace-nowrap rounded-full bg-whatsapp px-3.5 py-2 text-sm font-semibold text-white hover:opacity-90 transition"
           >
             <MessageCircle className="h-4 w-4" /> {t("nav.whatsapp")}
           </a>
           <button
             onClick={openAdmission}
-            className="whitespace-nowrap rounded-full hero-gradient px-5 py-2 text-sm font-semibold text-primary-foreground hover:scale-[1.03] transition-transform soft-shadow"
+            className="whitespace-nowrap rounded-full hero-gradient px-4 py-2 text-sm font-semibold text-primary-foreground hover:scale-[1.03] transition-transform soft-shadow"
           >
             {t("nav.apply")}
           </button>
