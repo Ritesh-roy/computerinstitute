@@ -35,7 +35,7 @@ export function Navbar() {
         scrolled ? "bg-background/85 backdrop-blur-md border-b border-border soft-shadow" : "bg-background/60 backdrop-blur"
       }`}
     >
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-3 px-4 lg:px-8">
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-3 px-4 lg:px-6">
         {/* Logo */}
         <div className="flex shrink-0 items-center">
           <Logo />
