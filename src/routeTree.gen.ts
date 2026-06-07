@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as ParamedicalRouteImport } from './routes/paramedical'
 import { Route as ExperienceRouteImport } from './routes/experience'
 import { Route as CoursesRouteImport } from './routes/courses'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AcademyProgramsRouteImport } from './routes/academy-programs'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
@@ -32,6 +33,11 @@ const ExperienceRoute = ExperienceRouteImport.update({
 const CoursesRoute = CoursesRouteImport.update({
   id: '/courses',
   path: '/courses',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AcademyProgramsRoute = AcademyProgramsRouteImport.update({
@@ -69,6 +75,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/academy-programs': typeof AcademyProgramsRouteWithChildren
+  '/contact': typeof ContactRoute
   '/courses': typeof CoursesRouteWithChildren
   '/experience': typeof ExperienceRoute
   '/paramedical': typeof ParamedicalRouteWithChildren
@@ -80,6 +87,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/academy-programs': typeof AcademyProgramsRouteWithChildren
+  '/contact': typeof ContactRoute
   '/courses': typeof CoursesRouteWithChildren
   '/experience': typeof ExperienceRoute
   '/paramedical': typeof ParamedicalRouteWithChildren
@@ -92,6 +100,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/academy-programs': typeof AcademyProgramsRouteWithChildren
+  '/contact': typeof ContactRoute
   '/courses': typeof CoursesRouteWithChildren
   '/experience': typeof ExperienceRoute
   '/paramedical': typeof ParamedicalRouteWithChildren
@@ -105,6 +114,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/academy-programs'
+    | '/contact'
     | '/courses'
     | '/experience'
     | '/paramedical'
@@ -116,6 +126,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/academy-programs'
+    | '/contact'
     | '/courses'
     | '/experience'
     | '/paramedical'
@@ -127,6 +138,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/academy-programs'
+    | '/contact'
     | '/courses'
     | '/experience'
     | '/paramedical'
@@ -139,6 +151,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   AcademyProgramsRoute: typeof AcademyProgramsRouteWithChildren
+  ContactRoute: typeof ContactRoute
   CoursesRoute: typeof CoursesRouteWithChildren
   ExperienceRoute: typeof ExperienceRoute
   ParamedicalRoute: typeof ParamedicalRouteWithChildren
@@ -165,6 +178,13 @@ declare module '@tanstack/react-router' {
       path: '/courses'
       fullPath: '/courses'
       preLoaderRoute: typeof CoursesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/academy-programs': {
@@ -251,6 +271,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   AcademyProgramsRoute: AcademyProgramsRouteWithChildren,
+  ContactRoute: ContactRoute,
   CoursesRoute: CoursesRouteWithChildren,
   ExperienceRoute: ExperienceRoute,
   ParamedicalRoute: ParamedicalRouteWithChildren,
