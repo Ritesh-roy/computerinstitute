@@ -74,3 +74,20 @@ export function courseWhatsappUrl(courseTitle: string): string {
 export function whatsappChatUrl(): string {
   return `https://wa.me/${WHATSAPP_NUMBER}`;
 }
+
+/** Build the wa.me URL for a Contact page inquiry. */
+export function contactWhatsappUrl(lead: ContactLead): string {
+  const message = [
+    "📩 New Contact Inquiry",
+    "",
+    `Name: ${lead.name}`,
+    `Phone: ${lead.phone}`,
+    `Email: ${lead.email}`,
+    `Course: ${lead.course}`,
+    `Message: ${lead.message}`,
+    `Date & Time: ${nowStamp()}`,
+    "",
+    "Submitted from SK Institute Website",
+  ].join("\n");
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+}
