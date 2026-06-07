@@ -10,8 +10,11 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ParamedicalRouteImport } from './routes/paramedical'
+import { Route as ExperienceRouteImport } from './routes/experience'
 import { Route as CoursesRouteImport } from './routes/courses'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AcademyProgramsRouteImport } from './routes/academy-programs'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ParamedicalSlugRouteImport } from './routes/paramedical.$slug'
 import { Route as CoursesSlugRouteImport } from './routes/courses.$slug'
@@ -22,14 +25,29 @@ const ParamedicalRoute = ParamedicalRouteImport.update({
   path: '/paramedical',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ExperienceRoute = ExperienceRouteImport.update({
+  id: '/experience',
+  path: '/experience',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CoursesRoute = CoursesRouteImport.update({
   id: '/courses',
   path: '/courses',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AcademyProgramsRoute = AcademyProgramsRouteImport.update({
   id: '/academy-programs',
   path: '/academy-programs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -55,8 +73,11 @@ const AcademyProgramsSlugRoute = AcademyProgramsSlugRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/academy-programs': typeof AcademyProgramsRouteWithChildren
+  '/contact': typeof ContactRoute
   '/courses': typeof CoursesRouteWithChildren
+  '/experience': typeof ExperienceRoute
   '/paramedical': typeof ParamedicalRouteWithChildren
   '/academy-programs/$slug': typeof AcademyProgramsSlugRoute
   '/courses/$slug': typeof CoursesSlugRoute
@@ -64,8 +85,11 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/academy-programs': typeof AcademyProgramsRouteWithChildren
+  '/contact': typeof ContactRoute
   '/courses': typeof CoursesRouteWithChildren
+  '/experience': typeof ExperienceRoute
   '/paramedical': typeof ParamedicalRouteWithChildren
   '/academy-programs/$slug': typeof AcademyProgramsSlugRoute
   '/courses/$slug': typeof CoursesSlugRoute
@@ -74,8 +98,11 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/academy-programs': typeof AcademyProgramsRouteWithChildren
+  '/contact': typeof ContactRoute
   '/courses': typeof CoursesRouteWithChildren
+  '/experience': typeof ExperienceRoute
   '/paramedical': typeof ParamedicalRouteWithChildren
   '/academy-programs/$slug': typeof AcademyProgramsSlugRoute
   '/courses/$slug': typeof CoursesSlugRoute
@@ -85,8 +112,11 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/about'
     | '/academy-programs'
+    | '/contact'
     | '/courses'
+    | '/experience'
     | '/paramedical'
     | '/academy-programs/$slug'
     | '/courses/$slug'
@@ -94,8 +124,11 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/about'
     | '/academy-programs'
+    | '/contact'
     | '/courses'
+    | '/experience'
     | '/paramedical'
     | '/academy-programs/$slug'
     | '/courses/$slug'
@@ -103,8 +136,11 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/about'
     | '/academy-programs'
+    | '/contact'
     | '/courses'
+    | '/experience'
     | '/paramedical'
     | '/academy-programs/$slug'
     | '/courses/$slug'
@@ -113,8 +149,11 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
   AcademyProgramsRoute: typeof AcademyProgramsRouteWithChildren
+  ContactRoute: typeof ContactRoute
   CoursesRoute: typeof CoursesRouteWithChildren
+  ExperienceRoute: typeof ExperienceRoute
   ParamedicalRoute: typeof ParamedicalRouteWithChildren
 }
 
@@ -127,6 +166,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ParamedicalRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/experience': {
+      id: '/experience'
+      path: '/experience'
+      fullPath: '/experience'
+      preLoaderRoute: typeof ExperienceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/courses': {
       id: '/courses'
       path: '/courses'
@@ -134,11 +180,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CoursesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/academy-programs': {
       id: '/academy-programs'
       path: '/academy-programs'
       fullPath: '/academy-programs'
       preLoaderRoute: typeof AcademyProgramsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -209,8 +269,11 @@ const ParamedicalRouteWithChildren = ParamedicalRoute._addFileChildren(
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
   AcademyProgramsRoute: AcademyProgramsRouteWithChildren,
+  ContactRoute: ContactRoute,
   CoursesRoute: CoursesRouteWithChildren,
+  ExperienceRoute: ExperienceRoute,
   ParamedicalRoute: ParamedicalRouteWithChildren,
 }
 export const routeTree = rootRouteImport
