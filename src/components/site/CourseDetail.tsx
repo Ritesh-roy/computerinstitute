@@ -83,11 +83,10 @@ export function CourseDetail({ course }: { course: Course }) {
                 <BookOpen className="h-6 w-6 text-primary" /> {t("courses.overview")}
               </h2>
               <p className="mt-4 text-base text-muted-foreground leading-relaxed">{course.description}</p>
-              <div className="mt-5 grid sm:grid-cols-3 gap-3">
+              <div className="mt-5 grid sm:grid-cols-2 gap-3">
                 {[
                   { icon: Clock, label: t("courses.duration"), value: course.duration },
                   { icon: GraduationCap, label: t("courses.eligibility"), value: course.eligibility },
-                  { icon: Wallet, label: t("courses.fees"), value: course.fees },
                 ].map((s) => (
                   <div key={s.label} className="rounded-2xl bg-card border border-border p-4">
                     <s.icon className="h-5 w-5 text-primary" />
