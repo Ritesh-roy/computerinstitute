@@ -72,7 +72,7 @@ export const en = {
       enquiry: "Submit the enquiry form or message us on WhatsApp",
       counsel: "Talk to a counsellor & visit the campus",
       documents: "Submit documents (ID proof, marksheet, photos)",
-      pay: "Pay the admission fee & confirm your seat",
+      pay: "Confirm your seat & complete enrolment",
       start: "Start classes in your chosen batch",
     },
   },
