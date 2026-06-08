@@ -198,12 +198,6 @@ export function CourseDetail({ course }: { course: Course }) {
                     </li>
                   ))}
                 </ul>
-                <div className="mt-5 rounded-2xl bg-secondary/40 border border-border p-4">
-                  <div className="flex items-center gap-2 text-sm font-semibold text-foreground">
-                    <Wallet className="h-4 w-4 text-primary" /> {t("courses.fees")}: {course.fees}
-                  </div>
-                  <p className="mt-1 text-xs text-muted-foreground">{t("courses.feesNote")}</p>
-                </div>
                 <button onClick={openAdmission} className="mt-6 w-full rounded-full hero-gradient px-6 py-3 text-sm font-semibold text-primary-foreground hover:scale-[1.02] transition-transform soft-shadow">
                   {t("courses.applyNow")}
                 </button>
