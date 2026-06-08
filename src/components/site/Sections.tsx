@@ -17,7 +17,7 @@ import { AdmissionForm } from "./AdmissionForm";
 import { openAdmission } from "@/lib/admission-modal";
 import { useT } from "@/lib/i18n";
 import { logoUrl } from "./Logo";
-import { PHONE_NUMBER, PHONE_DISPLAY, CONTACT_EMAIL, whatsappChatUrl } from "@/lib/whatsapp";
+import { PHONE_NUMBER, PHONE_DISPLAY, CONTACT_EMAIL, whatsappChatUrl, MAP_EMBED_URL, MAP_QUERY } from "@/lib/whatsapp";
 
 /* ----------------------------- HERO ----------------------------- */
 export function Hero({ onApply = openAdmission }: { onApply?: () => void } = {}) {
