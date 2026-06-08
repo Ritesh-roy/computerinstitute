@@ -589,7 +589,7 @@ export function Contact() {
               { icon: Phone, t: "Phone", d: PHONE_DISPLAY, sub: "Mon–Sat, 9 AM – 7 PM", href: `tel:${PHONE_NUMBER}` },
               { icon: MessageCircle, t: "WhatsApp", d: PHONE_DISPLAY, sub: "Quickest response", href: whatsappChatUrl() },
               { icon: Mail, t: "Email", d: CONTACT_EMAIL, sub: "Reply within 24h", href: `mailto:${CONTACT_EMAIL}` },
-              { icon: MapPin, t: "Address", d: "Main Road, Near City Center", sub: "A-818, B Block Rd, near A-BLOCK, Mangol Puri, New Delhi, India 110083" },
+              { icon: MapPin, t: "Address", d: "SK Institute", sub: MAP_QUERY },
             ].map((c) => {
               const Icon = c.icon;
               const Inner = (
