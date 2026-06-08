@@ -504,8 +504,8 @@ export function Testimonials() {
 /* ----------------------------- FAQ ----------------------------- */
 export function FAQ() {
   const qs = [
-    { q: "What is the admission process?", a: "Fill the admission form online or visit our campus. Our team will call you, explain course details, fees, and timing, and guide you through document submission." },
-    { q: "Do you offer EMI on course fees?", a: "Yes — most full-length courses and degree programs are available on easy monthly EMI options with no hidden charges." },
+    { q: "What is the admission process?", a: "Fill the admission form online or visit our campus. Our team will call you, explain course details, batches, and timing, and guide you through document submission." },
+    { q: "What batch timings are available?", a: "We run flexible morning, evening and weekend batches so you can study alongside work or school. Tell our counsellors your preference on WhatsApp." },
     { q: "Are the degrees UGC-recognized?", a: "All our distance-learning academy programs are offered through UGC-DEB recognized university partners. Certificates are valid for jobs and higher studies." },
     { q: "Will I get placement support?", a: "Yes. We run resume workshops, mock interviews, and connect you with our hiring partner network. Placement assistance is included with all professional programs." },
     { q: "Can I attend classes on weekends only?", a: "Absolutely. We have dedicated weekend batches for working professionals across most computer and academy programs." },
