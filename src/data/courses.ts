@@ -450,6 +450,117 @@ const raw: RawCourse[] = [
 
   // ----------------------------- PARAMEDICAL -----------------------------
   {
+    id: "anm",
+    title: "ANM (Auxiliary Nurse Midwifery)",
+    category: "paramedical",
+    duration: "2 Years",
+    eligibility: "10+2 (any stream)",
+    description:
+      "Auxiliary Nurse Midwifery — a recognized nursing programme focused on community health, maternal & child care and basic clinical nursing for hospital and rural healthcare roles.",
+    syllabus: ["Community Health Nursing", "Maternal & Child Health", "Health Promotion", "Nutrition", "Primary Health Care", "Hospital & Field Practice"],
+    career: ["Auxiliary Nurse", "Community Health Worker", "Midwife", "Hospital Nursing Staff"],
+  },
+  {
+    id: "gnm",
+    title: "GNM (General Nursing & Midwifery)",
+    category: "paramedical",
+    duration: "3 Years",
+    eligibility: "10+2 (any stream)",
+    description:
+      "General Nursing & Midwifery — comprehensive nursing training in patient care, medical-surgical nursing and midwifery, preparing you for staff nurse roles in hospitals.",
+    syllabus: ["Anatomy & Physiology", "Medical-Surgical Nursing", "Midwifery & Gynaecology", "Child Health Nursing", "Mental Health Nursing", "Clinical Internship"],
+    career: ["Staff Nurse", "Ward In-charge", "Midwife", "Community Nurse"],
+  },
+  {
+    id: "bsc-nursing",
+    title: "B.Sc Nursing",
+    category: "paramedical",
+    duration: "4 Years",
+    eligibility: "10+2 with PCB (Physics, Chemistry, Biology)",
+    description:
+      "Bachelor of Science in Nursing — a full degree programme covering advanced clinical nursing, research and leadership for professional staff-nurse and supervisory careers.",
+    syllabus: ["Anatomy, Physiology & Biochemistry", "Medical-Surgical Nursing", "Pharmacology", "Community Health Nursing", "Nursing Research & Management", "Clinical Practice"],
+    career: ["Registered Staff Nurse", "Nursing Supervisor", "Nursing Educator", "Public Health Nurse"],
+  },
+  {
+    id: "pb-bsc-nursing",
+    title: "PB B.Sc Nursing (Post Basic)",
+    category: "paramedical",
+    duration: "2 Years",
+    eligibility: "GNM with registration as RN/RM",
+    description:
+      "Post Basic B.Sc Nursing — a degree upgrade for GNM-qualified nurses, building advanced clinical, teaching and management skills for senior nursing positions.",
+    syllabus: ["Advanced Nursing Practice", "Nursing Education", "Nursing Administration", "Community Health Nursing", "Research & Statistics", "Clinical Specialisation"],
+    career: ["Senior Staff Nurse", "Nursing Tutor", "Ward Manager", "Nursing Administrator"],
+  },
+  {
+    id: "dpharma",
+    title: "D.Pharma (Diploma in Pharmacy)",
+    category: "paramedical",
+    duration: "2 Years",
+    eligibility: "10+2 with PCB / PCM",
+    description:
+      "Diploma in Pharmacy — learn pharmaceutics, pharmacology and dispensing to work as a registered pharmacist in hospitals, retail and the pharma industry.",
+    syllabus: ["Pharmaceutics", "Pharmacology", "Pharmaceutical Chemistry", "Pharmacognosy", "Drug Store & Hospital Pharmacy", "Practical Training"],
+    career: ["Pharmacist", "Hospital Pharmacist", "Medical Representative", "Drug Store In-charge"],
+  },
+  {
+    id: "bpharma",
+    title: "B.Pharma (Bachelor of Pharmacy)",
+    category: "paramedical",
+    duration: "4 Years",
+    eligibility: "10+2 with PCB / PCM",
+    description:
+      "Bachelor of Pharmacy — an in-depth degree in drug formulation, pharmacology and quality control for careers in the pharmaceutical industry, hospitals and research.",
+    syllabus: ["Pharmaceutics & Formulation", "Pharmacology & Toxicology", "Medicinal Chemistry", "Pharmaceutical Analysis", "Pharmacy Practice", "Industrial Training"],
+    career: ["Pharmacist", "Production Executive", "Quality Control Analyst", "Drug Inspector (eligible)"],
+  },
+  {
+    id: "bmlt",
+    title: "BMLT (Bachelor of Medical Lab Technology)",
+    category: "paramedical",
+    duration: "3–4 Years",
+    eligibility: "10+2 with Science (PCB)",
+    description:
+      "Bachelor in Medical Laboratory Technology — advanced diagnostics, pathology and lab management for senior medical laboratory technologist roles.",
+    syllabus: ["Clinical Biochemistry", "Microbiology & Immunology", "Hematology", "Histopathology & Cytology", "Lab Management & Quality Control", "Hospital Internship"],
+    career: ["Medical Lab Technologist", "Lab Supervisor", "Pathology Lab In-charge", "Research Lab Technician"],
+  },
+  {
+    id: "dot-bot",
+    title: "DOT / BOT (Operation Theatre Technology)",
+    category: "paramedical",
+    duration: "2–3 Years",
+    eligibility: "10+2 with Science",
+    description:
+      "Diploma / Bachelor in Operation Theatre Technology — train to assist surgical teams with OT setup, sterilization, anaesthesia support and patient care.",
+    syllabus: ["Operation Theatre Techniques", "Sterilization & Asepsis", "Anaesthesia Technology", "Surgical Instruments", "Patient Care & Safety", "Hospital Internship"],
+    career: ["OT Technician", "Surgical Assistant", "Anaesthesia Technician", "CSSD Technician"],
+  },
+  {
+    id: "doot",
+    title: "DOOT (Ophthalmic / Optometry Technology)",
+    category: "paramedical",
+    duration: "2 Years",
+    eligibility: "10+2 with Science",
+    description:
+      "Diploma in Ophthalmic & Optometry Technology — eye-care diagnostics, vision testing and optical dispensing for hospitals, eye clinics and optical centres.",
+    syllabus: ["Ocular Anatomy", "Refraction & Vision Testing", "Ophthalmic Instruments", "Optical Dispensing", "Eye Clinic Procedures", "Clinical Practice"],
+    career: ["Optometrist Assistant", "Ophthalmic Technician", "Vision Technician", "Optical Dispenser"],
+  },
+  {
+    id: "drit-brit",
+    title: "DRIT / BRIT (Radiology & Imaging Technology)",
+    category: "paramedical",
+    duration: "2–3 Years",
+    eligibility: "10+2 with Science (PCB/PCM)",
+    description:
+      "Diploma / Bachelor in Radiology & Imaging Technology — operate X-ray, CT, MRI and ultrasound systems for diagnostic imaging in hospitals and diagnostic centres.",
+    syllabus: ["Radiographic Physics", "X-Ray, CT & MRI Techniques", "Ultrasound Imaging", "Radiation Safety", "Patient Positioning", "Clinical Internship"],
+    career: ["Radiology Technician", "Imaging Technologist", "CT/MRI Technician", "Diagnostic Centre Technician"],
+  },
+
+  {
     id: "dmlt",
     title: "Medical Lab Technician (DMLT)",
     category: "paramedical",
