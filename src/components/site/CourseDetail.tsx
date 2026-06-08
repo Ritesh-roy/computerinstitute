@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import {
   Clock, GraduationCap, CheckCircle2, ArrowRight, Phone, MessageCircle, BookOpen,
-  Briefcase, Award, Wallet, ClipboardList, Building2, ChevronDown, HelpCircle, Star,
+  Briefcase, Award, ClipboardList, Building2, ChevronDown, HelpCircle, Star,
 } from "lucide-react";
 import type { Course } from "@/data/courses";
 import { getCoursesByCategory } from "@/data/courses";
