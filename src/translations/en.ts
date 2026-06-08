@@ -95,7 +95,7 @@ export const en = {
   contact: {
     label: "Get in Touch",
     title: "Contact SK Institute",
-    intro: "Have a question about courses, fees or admissions? Reach out — we're here to help.",
+    intro: "Have a question about courses or admissions? Reach out — we're here to help.",
     phone: "Phone",
     whatsapp: "WhatsApp",
     email: "Email",
