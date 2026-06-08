@@ -57,9 +57,6 @@ export function CourseDetail({ course }: { course: Course }) {
             <span className="inline-flex items-center gap-2 rounded-full bg-card border border-border px-4 py-2 text-sm font-semibold text-foreground">
               <BookOpen className="h-4 w-4 text-primary" /> {t("courses.eligibility")}: {course.eligibility}
             </span>
-            <span className="inline-flex items-center gap-2 rounded-full bg-card border border-border px-4 py-2 text-sm font-semibold text-foreground">
-              <Wallet className="h-4 w-4 text-primary" /> {t("courses.fees")}: {course.fees}
-            </span>
           </div>
 
           <div className="mt-7 flex flex-wrap gap-3">
