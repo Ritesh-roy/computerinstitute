@@ -1,5 +1,7 @@
 import { Link } from "@tanstack/react-router";
-import logo from "@/assets/sk-logo.png.asset.json";
+
+// TODO: Replace with your logo URL
+const LOGO_URL = "https://i.pinimg.com/736x/58/4c/59/584c591b6132865df8cb5de30b3633aa.jpg";
 
 export function Logo({
   withText = true,
@@ -13,7 +15,7 @@ export function Logo({
   return (
     <Link to="/" className={`flex items-center gap-2.5 ${className}`}>
       <img
-        src={logo.url}
+        src={LOGO_URL}
         alt="SK Institute logo"
         className={`${imgClassName} rounded-lg object-contain bg-white/95 p-1 shadow-sm`}
         width={44}
@@ -33,4 +35,4 @@ export function Logo({
   );
 }
 
-export const logoUrl = logo.url;
+export const logoUrl = LOGO_URL;
