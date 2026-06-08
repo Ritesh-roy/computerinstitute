@@ -23,7 +23,7 @@ export type Course = {
   highlights: string[];
   career: string[];
   certification: string;
-  fees: string;
+  fees?: string;
   faq: FaqItem[];
 };
 
