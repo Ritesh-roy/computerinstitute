@@ -400,7 +400,7 @@ export function WhyChoose() {
     { t: "Updated Syllabus", d: "Curriculum refreshed every year to match industry trends and certifications." },
     { t: "Career Guidance", d: "1-on-1 counseling sessions to chart your career path from day one." },
     { t: "Placement Support", d: "Active network of hiring partners, resume workshops, and mock interviews." },
-    { t: "Affordable Fees", d: "Transparent pricing with easy EMI options — no hidden charges, ever." },
+    { t: "Expert Faculty", d: "Learn from experienced trainers with strong industry and teaching backgrounds." },
     { t: "Modern Infrastructure", d: "Bright, air-conditioned classrooms and well-equipped labs." },
     { t: "Certified Programs", d: "Government-recognized and UGC-DEB-approved degrees and diplomas." },
   ];
