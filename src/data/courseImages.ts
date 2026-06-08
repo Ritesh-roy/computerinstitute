@@ -60,6 +60,16 @@ const photoIds: Record<string, string> = {
   "competitive-exam": "1434030216411-0b793f4b4173",
 
   // ---------------- Paramedical Courses ----------------
+  anm: "1631217868264-e5b90bb7e133",
+  gnm: "1576765608535-5f04d1e3f289",
+  "bsc-nursing": "1612349317150-e413f6a5b16d",
+  "pb-bsc-nursing": "1594824476967-48c8b964273f",
+  dpharma: "1587854692152-cbe660dbde88",
+  bpharma: "1631549916768-4119b2e5f926",
+  bmlt: "1581093450021-4a7360e9a6b5",
+  "dot-bot": "1551601651-2a8555f1a136",
+  doot: "1606811841689-23dfddce3e95",
+  "drit-brit": "1518770660439-4636190af475",
   dmlt: "1579154204601-01588f351e67",
   cmlt: "1582719478250-c89cae4dc85b",
   "cms-ed": "1505751172876-fa1923c5c528",
