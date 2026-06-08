@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import {
   Clock, GraduationCap, CheckCircle2, ArrowRight, Phone, MessageCircle, BookOpen,
-  Briefcase, Award, Wallet, ClipboardList, Building2, ChevronDown, HelpCircle, Star,
+  Briefcase, Award, ClipboardList, Building2, ChevronDown, HelpCircle, Star,
 } from "lucide-react";
 import type { Course } from "@/data/courses";
 import { getCoursesByCategory } from "@/data/courses";
@@ -57,9 +57,6 @@ export function CourseDetail({ course }: { course: Course }) {
             <span className="inline-flex items-center gap-2 rounded-full bg-card border border-border px-4 py-2 text-sm font-semibold text-foreground">
               <BookOpen className="h-4 w-4 text-primary" /> {t("courses.eligibility")}: {course.eligibility}
             </span>
-            <span className="inline-flex items-center gap-2 rounded-full bg-card border border-border px-4 py-2 text-sm font-semibold text-foreground">
-              <Wallet className="h-4 w-4 text-primary" /> {t("courses.fees")}: {course.fees}
-            </span>
           </div>
 
           <div className="mt-7 flex flex-wrap gap-3">
@@ -86,11 +83,10 @@ export function CourseDetail({ course }: { course: Course }) {
                 <BookOpen className="h-6 w-6 text-primary" /> {t("courses.overview")}
               </h2>
               <p className="mt-4 text-base text-muted-foreground leading-relaxed">{course.description}</p>
-              <div className="mt-5 grid sm:grid-cols-3 gap-3">
+              <div className="mt-5 grid sm:grid-cols-2 gap-3">
                 {[
                   { icon: Clock, label: t("courses.duration"), value: course.duration },
                   { icon: GraduationCap, label: t("courses.eligibility"), value: course.eligibility },
-                  { icon: Wallet, label: t("courses.fees"), value: course.fees },
                 ].map((s) => (
                   <div key={s.label} className="rounded-2xl bg-card border border-border p-4">
                     <s.icon className="h-5 w-5 text-primary" />
@@ -202,12 +198,6 @@ export function CourseDetail({ course }: { course: Course }) {
                     </li>
                   ))}
                 </ul>
-                <div className="mt-5 rounded-2xl bg-secondary/40 border border-border p-4">
-                  <div className="flex items-center gap-2 text-sm font-semibold text-foreground">
-                    <Wallet className="h-4 w-4 text-primary" /> {t("courses.fees")}: {course.fees}
-                  </div>
-                  <p className="mt-1 text-xs text-muted-foreground">{t("courses.feesNote")}</p>
-                </div>
                 <button onClick={openAdmission} className="mt-6 w-full rounded-full hero-gradient px-6 py-3 text-sm font-semibold text-primary-foreground hover:scale-[1.02] transition-transform soft-shadow">
                   {t("courses.applyNow")}
                 </button>

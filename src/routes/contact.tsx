@@ -11,7 +11,7 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact Us | SK Institute" },
-      { name: "description", content: "Contact SK Institute — call +91 99715 41416, email Qurbisecom1@gmail.com, or send your inquiry directly via WhatsApp. Find us on the map and get directions." },
+      { name: "description", content: "Contact SK Institute — call +91 99715 41416, email skcomputerinstitute53@gmail.com, or send your inquiry directly via WhatsApp. Find us on the map and get directions." },
       { property: "og:title", content: "Contact Us | SK Institute" },
       { property: "og:description", content: "Call, email or WhatsApp SK Institute. Find us on the map and get directions." },
       { property: "og:type", content: "website" },

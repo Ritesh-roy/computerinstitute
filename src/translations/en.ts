@@ -72,7 +72,7 @@ export const en = {
       enquiry: "Submit the enquiry form or message us on WhatsApp",
       counsel: "Talk to a counsellor & visit the campus",
       documents: "Submit documents (ID proof, marksheet, photos)",
-      pay: "Pay the admission fee & confirm your seat",
+      pay: "Confirm your seat & complete enrolment",
       start: "Start classes in your chosen batch",
     },
   },
@@ -95,7 +95,7 @@ export const en = {
   contact: {
     label: "Get in Touch",
     title: "Contact SK Institute",
-    intro: "Have a question about courses, fees or admissions? Reach out — we're here to help.",
+    intro: "Have a question about courses or admissions? Reach out — we're here to help.",
     phone: "Phone",
     whatsapp: "WhatsApp",
     email: "Email",

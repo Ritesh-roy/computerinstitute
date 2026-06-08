@@ -17,7 +17,7 @@ import { AdmissionForm } from "./AdmissionForm";
 import { openAdmission } from "@/lib/admission-modal";
 import { useT } from "@/lib/i18n";
 import { logoUrl } from "./Logo";
-import { PHONE_NUMBER, PHONE_DISPLAY, CONTACT_EMAIL, whatsappChatUrl } from "@/lib/whatsapp";
+import { PHONE_NUMBER, PHONE_DISPLAY, CONTACT_EMAIL, whatsappChatUrl, MAP_EMBED_URL, MAP_QUERY } from "@/lib/whatsapp";
 
 /* ----------------------------- HERO ----------------------------- */
 export function Hero({ onApply = openAdmission }: { onApply?: () => void } = {}) {
@@ -149,7 +149,7 @@ export function AcademyPrograms({ onApply = openAdmission }: { onApply?: () => v
               Earn a real degree while working — our distance-learning partnerships let you study from anywhere with full faculty support, study materials, and exam prep. Whether you're starting your career or upgrading your qualifications, there's a program built for you.
             </p>
             <ul className="mt-6 space-y-2">
-              {["UGC-DEB recognized universities", "Study material + recorded lectures", "Weekend doubt-clearing sessions", "Easy EMI fee options"].map((t) => (
+              {["UGC-DEB recognized universities", "Study material + recorded lectures", "Weekend doubt-clearing sessions", "Flexible weekend & evening batches"].map((t) => (
                 <li key={t} className="flex items-center gap-2 text-sm text-foreground/80">
                   <CheckCircle2 className="h-4 w-4 text-primary shrink-0" /> {t}
                 </li>
@@ -400,7 +400,7 @@ export function WhyChoose() {
     { t: "Updated Syllabus", d: "Curriculum refreshed every year to match industry trends and certifications." },
     { t: "Career Guidance", d: "1-on-1 counseling sessions to chart your career path from day one." },
     { t: "Placement Support", d: "Active network of hiring partners, resume workshops, and mock interviews." },
-    { t: "Affordable Fees", d: "Transparent pricing with easy EMI options — no hidden charges, ever." },
+    { t: "Expert Faculty", d: "Learn from experienced trainers with strong industry and teaching backgrounds." },
     { t: "Modern Infrastructure", d: "Bright, air-conditioned classrooms and well-equipped labs." },
     { t: "Certified Programs", d: "Government-recognized and UGC-DEB-approved degrees and diplomas." },
   ];
@@ -504,8 +504,8 @@ export function Testimonials() {
 /* ----------------------------- FAQ ----------------------------- */
 export function FAQ() {
   const qs = [
-    { q: "What is the admission process?", a: "Fill the admission form online or visit our campus. Our team will call you, explain course details, fees, and timing, and guide you through document submission." },
-    { q: "Do you offer EMI on course fees?", a: "Yes — most full-length courses and degree programs are available on easy monthly EMI options with no hidden charges." },
+    { q: "What is the admission process?", a: "Fill the admission form online or visit our campus. Our team will call you, explain course details, batches, and timing, and guide you through document submission." },
+    { q: "What batch timings are available?", a: "We run flexible morning, evening and weekend batches so you can study alongside work or school. Tell our counsellors your preference on WhatsApp." },
     { q: "Are the degrees UGC-recognized?", a: "All our distance-learning academy programs are offered through UGC-DEB recognized university partners. Certificates are valid for jobs and higher studies." },
     { q: "Will I get placement support?", a: "Yes. We run resume workshops, mock interviews, and connect you with our hiring partner network. Placement assistance is included with all professional programs." },
     { q: "Can I attend classes on weekends only?", a: "Absolutely. We have dedicated weekend batches for working professionals across most computer and academy programs." },
@@ -589,7 +589,7 @@ export function Contact() {
               { icon: Phone, t: "Phone", d: PHONE_DISPLAY, sub: "Mon–Sat, 9 AM – 7 PM", href: `tel:${PHONE_NUMBER}` },
               { icon: MessageCircle, t: "WhatsApp", d: PHONE_DISPLAY, sub: "Quickest response", href: whatsappChatUrl() },
               { icon: Mail, t: "Email", d: CONTACT_EMAIL, sub: "Reply within 24h", href: `mailto:${CONTACT_EMAIL}` },
-              { icon: MapPin, t: "Address", d: "Main Road, Near City Center", sub: "A-818, B Block Rd, near A-BLOCK, Mangol Puri, New Delhi, India 110083" },
+              { icon: MapPin, t: "Address", d: "SK Institute", sub: MAP_QUERY },
             ].map((c) => {
               const Icon = c.icon;
               const Inner = (
@@ -624,10 +624,11 @@ export function Contact() {
 
           <div className="rounded-2xl overflow-hidden border border-border soft-shadow min-h-[500px]">
             <iframe
-              title="Academy location"
-              src="https://maps.google.com/maps?q=SK%20Institute%20Mangolpuri%20Delhi&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              title="SK Institute location"
+              src={MAP_EMBED_URL}
               className="h-full w-full min-h-[500px]"
               loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
         </div>
