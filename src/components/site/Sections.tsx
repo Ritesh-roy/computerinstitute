@@ -149,7 +149,7 @@ export function AcademyPrograms({ onApply = openAdmission }: { onApply?: () => v
               Earn a real degree while working — our distance-learning partnerships let you study from anywhere with full faculty support, study materials, and exam prep. Whether you're starting your career or upgrading your qualifications, there's a program built for you.
             </p>
             <ul className="mt-6 space-y-2">
-              {["UGC-DEB recognized universities", "Study material + recorded lectures", "Weekend doubt-clearing sessions", "Easy EMI fee options"].map((t) => (
+              {["UGC-DEB recognized universities", "Study material + recorded lectures", "Weekend doubt-clearing sessions", "Flexible weekend & evening batches"].map((t) => (
                 <li key={t} className="flex items-center gap-2 text-sm text-foreground/80">
                   <CheckCircle2 className="h-4 w-4 text-primary shrink-0" /> {t}
                 </li>
