@@ -624,10 +624,11 @@ export function Contact() {
 
           <div className="rounded-2xl overflow-hidden border border-border soft-shadow min-h-[500px]">
             <iframe
-              title="Academy location"
-              src="https://maps.google.com/maps?q=SK%20Institute%20Mangolpuri%20Delhi&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              title="SK Institute location"
+              src={MAP_EMBED_URL}
               className="h-full w-full min-h-[500px]"
               loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
         </div>
