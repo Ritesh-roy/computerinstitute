@@ -70,8 +70,8 @@ const buildFaq = (c: Omit<Course, "image" | "faq">): FaqItem[] => [
     a: `Eligibility for ${c.title} is: ${c.eligibility}. If you are unsure whether you qualify, contact our counsellors on WhatsApp and we'll guide you.`,
   },
   {
-    q: `What is the fee for ${c.title}?`,
-    a: `The approximate fee for ${c.title} is ${c.fees}. Easy EMI / instalment options and scholarships for meritorious students are available.`,
+    q: `What batch timings are available for ${c.title}?`,
+    a: `${c.title} is offered in flexible morning, evening and weekend batches so you can study alongside work or school. Contact our counsellors on WhatsApp to pick a slot.`,
   },
   {
     q: `Will I get a certificate and placement help?`,
