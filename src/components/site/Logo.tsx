@@ -13,24 +13,25 @@ export function Logo({
   imgClassName?: string;
 }) {
   return (
-    <Link to="/" className={`flex items-center gap-2.5 ${className}`}>
+    <Link to="/" className={`flex min-w-0 items-center gap-2 sm:gap-2.5 ${className}`}>
       <img
         src={LOGO_URL}
         alt="SK Institute logo"
-        className={`${imgClassName} rounded-lg object-contain bg-white/95 p-1 shadow-sm`}
+        className={`${imgClassName} shrink-0 rounded-lg object-contain bg-white/95 p-1 shadow-sm`}
         width={44}
         height={44}
       />
       {withText && (
-        <div className="leading-tight">
-          <div className="font-display font-bold text-base text-foreground">
+        <div className="min-w-0 leading-tight">
+          <div className="truncate font-display font-bold text-sm sm:text-base text-foreground">
             SK Institute
           </div>
-          <div className="text-[11px] text-muted-foreground">
+          <div className="hidden sm:block truncate text-[11px] text-muted-foreground">
             Computer • Academic • Paramedical
           </div>
         </div>
       )}
+
     </Link>
   );
 }
