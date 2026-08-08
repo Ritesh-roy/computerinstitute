@@ -2,9 +2,9 @@
 export const en = {
   nav: {
     home: "Home",
-    courses: "Computer Courses",
-    academy: "Academic Courses",
-    paramedical: "Paramedical Courses",
+    courses: "Computer course's",
+    academy: "Academic course's",
+    paramedical: "Peramedical course's",
     about: "About Us",
     experience: "Experience",
     contact: "Contact Us",
@@ -39,9 +39,9 @@ export const en = {
     readStory: "Read Our Story",
   },
   categories: {
-    computer: "Computer Courses",
-    academy: "Academic Courses",
-    paramedical: "Paramedical Courses",
+    computer: "Computer course's",
+    academy: "Academic course's",
+    paramedical: "Peramedical course's",
     computerIntro: "Industry-ready computer training — click any course to view full details.",
     academyIntro: "Foundation, board and skill programs with expert faculty and personal attention.",
     paramedicalIntro: "Clinical training and hospital internship pathways for healthcare careers.",

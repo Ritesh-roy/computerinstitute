@@ -6,9 +6,9 @@ import { useT } from "@/lib/i18n";
 export const Route = createFileRoute("/paramedical")({
   head: () => ({
     meta: [
-      { title: "Paramedical Courses — SK Institute" },
+      { title: "Peramedical course's — SK Institute" },
       { name: "description", content: "Paramedical courses at SK Institute — DMLT, CMLT, CMS & ED, X-Ray, ECG, OT and Dialysis Technician, Medical Lab Assistant and General Duty Assistant with clinical training." },
-      { property: "og:title", content: "Paramedical Courses — SK Institute" },
+      { property: "og:title", content: "Peramedical course's — SK Institute" },
     ],
   }),
   component: ParamedicalRouteComponent,

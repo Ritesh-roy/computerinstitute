@@ -143,7 +143,7 @@ export function AcademyPrograms({ onApply = openAdmission }: { onApply?: () => v
             </div>
           </div>
           <div>
-            <div className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3">Academic Courses</div>
+            <div className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3">Academic course's</div>
             <h2 className="text-3xl md:text-5xl font-bold text-foreground">UGC-recognized degrees through <span className="bg-clip-text text-transparent hero-gradient">distance learning</span></h2>
             <p className="mt-4 text-muted-foreground text-base md:text-lg">
               Earn a real degree while working — our distance-learning partnerships let you study from anywhere with full faculty support, study materials, and exam prep. Whether you're starting your career or upgrading your qualifications, there's a program built for you.
@@ -198,7 +198,7 @@ export function Paramedical({ onApply = openAdmission }: { onApply?: () => void 
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         <div className="grid lg:grid-cols-[1.2fr_1fr] gap-12 items-center mb-12">
           <div>
-            <div className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3">Paramedical Courses</div>
+            <div className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3">Peramedical course's</div>
             <h2 className="text-3xl md:text-5xl font-bold text-foreground">Build a career in <span className="bg-clip-text text-transparent hero-gradient">healthcare</span></h2>
             <p className="mt-4 text-muted-foreground text-base md:text-lg">
               India's healthcare sector is one of the fastest-growing job markets. Our paramedical courses combine theoretical foundations with hands-on clinical training so you graduate ready to serve in hospitals, clinics, and diagnostic centers.
