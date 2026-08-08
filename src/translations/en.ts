@@ -4,7 +4,7 @@ export const en = {
     home: "Home",
     courses: "Computer course's",
     academy: "Academic course's",
-    paramedical: "Paramedical course's",
+    paramedical: "Peramedical course's",
     about: "About Us",
     experience: "Experience",
     contact: "Contact Us",
@@ -41,7 +41,7 @@ export const en = {
   categories: {
     computer: "Computer course's",
     academy: "Academic course's",
-    paramedical: "Paramedical course's",
+    paramedical: "Peramedical course's",
     computerIntro: "Industry-ready computer training — click any course to view full details.",
     academyIntro: "Foundation, board and skill programs with expert faculty and personal attention.",
     paramedicalIntro: "Clinical training and hospital internship pathways for healthcare careers.",

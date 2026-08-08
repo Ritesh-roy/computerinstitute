@@ -60,13 +60,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "SK Institute — Computer, Academic & Paramedical Courses" },
+      { title: "SK Institute — Computer, Academic & Peramedical course's" },
       { name: "description", content: "SK Institute — 21+ Years of Educational Excellence Since 2005. Professional computer courses, academic courses and paramedical education with industry-oriented training." },
-      { property: "og:title", content: "SK Institute — Computer, Academic & Paramedical Courses" },
+      { property: "og:title", content: "SK Institute — Computer, Academic & Peramedical course's" },
       { property: "og:description", content: "SK Institute — 21+ Years of Educational Excellence Since 2005. Professional computer courses, academic courses and paramedical education with industry-oriented training." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:title", content: "SK Institute — Computer, Academic & Paramedical Courses" },
+      { name: "twitter:title", content: "SK Institute — Computer, Academic & Peramedical course's" },
       { name: "twitter:description", content: "SK Institute — 21+ Years of Educational Excellence Since 2005. Professional computer courses, academic courses and paramedical education with industry-oriented training." },
     ],
     links: [
