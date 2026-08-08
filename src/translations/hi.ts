@@ -6,7 +6,7 @@ export const hi: Translation = {
     home: "होम",
     courses: "कंप्यूटर कोर्स",
     academy: "अकादमिक कोर्स",
-    paramedical: "पैरामेडिकल",
+    paramedical: "पैरामेडिकल कोर्स",
     about: "हमारे बारे में",
     experience: "अनुभव",
     contact: "संपर्क करें",
