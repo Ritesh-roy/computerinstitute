@@ -27,7 +27,7 @@ export function Logo({
             SK Institute
           </div>
           <div className="text-[11px] text-muted-foreground">
-            Computer • Academy • Paramedical
+            Computer • Academic • Paramedical
           </div>
         </div>
       )}

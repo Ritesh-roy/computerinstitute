@@ -10,8 +10,8 @@ import successImg from "@/assets/hd-success.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "SK Institute — Home | Computer, Academy & Paramedical Courses" },
-      { name: "description", content: "Welcome to SK Institute. 21+ Years of Educational Excellence Since 2005 — professional computer courses, academy programs and paramedical education." },
+      { title: "SK Institute — Home | Computer, Academic & Paramedical Courses" },
+      { name: "description", content: "Welcome to SK Institute. 21+ Years of Educational Excellence Since 2005 — professional computer courses, academic courses and paramedical education." },
     ],
   }),
   component: HomePage,
