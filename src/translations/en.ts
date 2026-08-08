@@ -4,7 +4,7 @@ export const en = {
     home: "Home",
     courses: "Computer Courses",
     academy: "Academic Courses",
-    paramedical: "Paramedical",
+    paramedical: "Paramedical Courses",
     about: "About Us",
     experience: "Experience",
     contact: "Contact Us",
