@@ -3,7 +3,7 @@ export const en = {
   nav: {
     home: "Home",
     courses: "Computer Courses",
-    academy: "Academy Programs",
+    academy: "Academic Courses",
     paramedical: "Paramedical",
     about: "About Us",
     experience: "Experience",
@@ -18,7 +18,7 @@ export const en = {
     instituteName: "SK Institute",
     subtitle: "21+ Years of Educational Excellence Since 2005",
     description:
-      "Professional Computer Courses, Academy Programs and Paramedical Education with Industry-Oriented Training.",
+      "Professional Computer Courses, Academic Courses and Paramedical Education with Industry-Oriented Training.",
     applyNow: "Apply Now",
     callNow: "Call Now",
     whatsapp: "WhatsApp",
@@ -34,13 +34,13 @@ export const en = {
   about: {
     label: "About SK Institute",
     title: "A trusted name in education since 2005",
-    p1: "SK Institute is a premier institute offering computer courses, academy programs, and paramedical training — focused on practical skills, modern curriculum, and personalized mentorship.",
+    p1: "SK Institute is a premier institute offering computer courses, academic courses, and paramedical training — focused on practical skills, modern curriculum, and personalized mentorship.",
     p2: "For 21+ years we've helped 10,000+ students build confident, job-ready careers. Our faculty bring real industry experience and our labs are equipped with the latest tools.",
     readStory: "Read Our Story",
   },
   categories: {
     computer: "Computer Courses",
-    academy: "Academy Programs",
+    academy: "Academic Courses",
     paramedical: "Paramedical Courses",
     computerIntro: "Industry-ready computer training — click any course to view full details.",
     academyIntro: "Foundation, board and skill programs with expert faculty and personal attention.",

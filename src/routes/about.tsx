@@ -6,7 +6,7 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About Us | SK Institute" },
-      { name: "description", content: "About SK Institute — 21+ years of career-focused education in computer courses, academy programs and paramedical training. Experienced trainers, practical learning and placement support." },
+      { name: "description", content: "About SK Institute — 21+ years of career-focused education in computer courses, academic courses and paramedical training. Experienced trainers, practical learning and placement support." },
       { property: "og:title", content: "About Us | SK Institute" },
       { property: "og:description", content: "21+ years of career-focused education in computer, academy and paramedical training." },
       { property: "og:type", content: "website" },

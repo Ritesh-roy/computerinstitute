@@ -143,7 +143,7 @@ export function AcademyPrograms({ onApply = openAdmission }: { onApply?: () => v
             </div>
           </div>
           <div>
-            <div className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3">Academy Programs</div>
+            <div className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3">Academic Courses</div>
             <h2 className="text-3xl md:text-5xl font-bold text-foreground">UGC-recognized degrees through <span className="bg-clip-text text-transparent hero-gradient">distance learning</span></h2>
             <p className="mt-4 text-muted-foreground text-base md:text-lg">
               Earn a real degree while working — our distance-learning partnerships let you study from anywhere with full faculty support, study materials, and exam prep. Whether you're starting your career or upgrading your qualifications, there's a program built for you.
@@ -156,7 +156,7 @@ export function AcademyPrograms({ onApply = openAdmission }: { onApply?: () => v
               ))}
             </ul>
             <button onClick={onApply} className="mt-6 rounded-full hero-gradient px-6 py-3 text-sm font-semibold text-primary-foreground hover:scale-[1.04] transition-transform soft-shadow">
-              Apply for Academy Program
+              Apply for Academic Course
             </button>
           </div>
         </div>
@@ -362,7 +362,7 @@ export function About() {
             <div className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-primary mb-3">About Us</div>
             <h2 className="text-3xl md:text-5xl font-bold text-foreground">A Legacy of Quality Education & Success</h2>
             <p className="mt-5 text-muted-foreground text-base md:text-lg">
-              SK Institute is a premier institute offering computer courses, academy programs, and paramedical training. For 21 years, we've focused on practical skills, modern curriculum, and personalized mentorship that prepares students for real-world success.
+              SK Institute is a premier institute offering computer courses, academic courses, and paramedical training. For 21 years, we've focused on practical skills, modern curriculum, and personalized mentorship that prepares students for real-world success.
             </p>
             <p className="mt-3 text-muted-foreground">
               Our philosophy is simple — every student deserves an affordable, high-quality, career-focused education. From a first-time computer learner to a working professional pursuing an MBA, we meet you where you are and walk with you to where you want to be.
@@ -506,9 +506,9 @@ export function FAQ() {
   const qs = [
     { q: "What is the admission process?", a: "Fill the admission form online or visit our campus. Our team will call you, explain course details, batches, and timing, and guide you through document submission." },
     { q: "What batch timings are available?", a: "We run flexible morning, evening and weekend batches so you can study alongside work or school. Tell our counsellors your preference on WhatsApp." },
-    { q: "Are the degrees UGC-recognized?", a: "All our distance-learning academy programs are offered through UGC-DEB recognized university partners. Certificates are valid for jobs and higher studies." },
+    { q: "Are the degrees UGC-recognized?", a: "All our distance-learning academic courses are offered through UGC-DEB recognized university partners. Certificates are valid for jobs and higher studies." },
     { q: "Will I get placement support?", a: "Yes. We run resume workshops, mock interviews, and connect you with our hiring partner network. Placement assistance is included with all professional programs." },
-    { q: "Can I attend classes on weekends only?", a: "Absolutely. We have dedicated weekend batches for working professionals across most computer and academy programs." },
+    { q: "Can I attend classes on weekends only?", a: "Absolutely. We have dedicated weekend batches for working professionals across most computer and academic courses." },
     { q: "Do you provide a certificate?", a: "Every completed course comes with a recognized certificate from the academy or partner university." },
   ];
   const [open, setOpen] = useState<number | null>(0);
