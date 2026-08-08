@@ -5,7 +5,7 @@ export const hi: Translation = {
   nav: {
     home: "होम",
     courses: "कंप्यूटर कोर्स",
-    academy: "अकादमी प्रोग्राम",
+    academy: "अकादमिक कोर्स",
     paramedical: "पैरामेडिकल",
     about: "हमारे बारे में",
     experience: "अनुभव",
@@ -42,7 +42,7 @@ export const hi: Translation = {
   },
   categories: {
     computer: "कंप्यूटर कोर्स",
-    academy: "अकादमी प्रोग्राम",
+    academy: "अकादमिक कोर्स",
     paramedical: "पैरामेडिकल कोर्स",
     computerIntro: "इंडस्ट्री-तैयार कंप्यूटर प्रशिक्षण — पूरी जानकारी देखने के लिए किसी भी कोर्स पर क्लिक करें।",
     academyIntro: "विशेषज्ञ फैकल्टी और व्यक्तिगत ध्यान के साथ फाउंडेशन, बोर्ड और कौशल प्रोग्राम।",

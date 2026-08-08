@@ -103,7 +103,7 @@ export const en = {
     chatNow: "Chat on WhatsApp",
   },
   footer: {
-    tagline: "21+ Years of Educational Excellence Since 2005. Computer • Academy • Paramedical.",
+    tagline: "21+ Years of Educational Excellence Since 2005. Computer • Academic • Paramedical.",
     quickLinks: "Quick Links",
     programs: "Programs",
     contact: "Contact",

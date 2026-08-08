@@ -26,7 +26,7 @@ function AboutPage() {
         <div className="relative mx-auto max-w-7xl px-4 lg:px-8 py-20 lg:py-28 text-center animate-fade-in">
           <img src={logoUrl} alt="SK Institute logo" className="mx-auto h-20 w-20 rounded-2xl bg-white/95 p-2 shadow-lg mb-6" width={80} height={80} />
           <h1 className="text-4xl md:text-6xl font-bold">SK Institute</h1>
-          <p className="mt-4 text-lg md:text-2xl font-semibold opacity-95">Computer • Academy • Paramedical</p>
+          <p className="mt-4 text-lg md:text-2xl font-semibold opacity-95">Computer • Academic • Paramedical</p>
           <p className="mt-4 max-w-2xl mx-auto text-base md:text-lg opacity-90">
             Building careers with practical, affordable and industry-oriented education since 2005.
           </p>
