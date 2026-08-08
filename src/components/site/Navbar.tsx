@@ -35,20 +35,20 @@ export function Navbar() {
         scrolled ? "bg-background/85 backdrop-blur-md border-b border-border soft-shadow" : "bg-background/60 backdrop-blur"
       }`}
     >
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-3 px-4 lg:px-6">
+      <div className="mx-auto flex h-16 sm:h-20 w-full max-w-7xl items-center justify-between gap-2 px-3 sm:px-4 lg:px-6">
         {/* Logo */}
-        <div className="flex shrink-0 items-center">
+        <div className="flex min-w-0 shrink items-center">
           <Logo />
         </div>
 
         {/* Desktop nav */}
-        <nav className="hidden xl:flex flex-1 items-center justify-center gap-4 2xl:gap-7">
+        <nav className="hidden xl:flex flex-1 items-center justify-center gap-3 2xl:gap-5">
           {links.map((l) => (
             <Link
               key={l.to}
               to={l.to}
               activeOptions={{ exact: l.to === "/" }}
-              className="whitespace-nowrap text-sm font-medium text-foreground/80 hover:text-primary transition-colors relative after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full data-[status=active]:text-primary data-[status=active]:after:w-full"
+              className="whitespace-nowrap text-[13px] 2xl:text-sm font-medium text-foreground/80 hover:text-primary transition-colors relative after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full data-[status=active]:text-primary data-[status=active]:after:w-full"
             >
               {l.label}
             </Link>
@@ -62,9 +62,11 @@ export function Navbar() {
             href={whatsappChatUrl()}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-1.5 whitespace-nowrap rounded-full bg-whatsapp px-3.5 py-2 text-sm font-semibold text-white hover:opacity-90 transition"
+            aria-label={t("nav.whatsapp")}
+            className="inline-flex items-center gap-1.5 whitespace-nowrap rounded-full bg-whatsapp px-3 py-2 text-sm font-semibold text-white hover:opacity-90 transition"
           >
-            <MessageCircle className="h-4 w-4" /> {t("nav.whatsapp")}
+            <MessageCircle className="h-4 w-4" />
+            <span className="hidden 2xl:inline">{t("nav.whatsapp")}</span>
           </a>
           <button
             onClick={openAdmission}
@@ -75,15 +77,17 @@ export function Navbar() {
         </div>
 
         {/* Mobile / tablet controls */}
-        <div className="flex shrink-0 items-center gap-2 xl:hidden">
+        <div className="flex shrink-0 items-center gap-1.5 xl:hidden">
           <LanguageSwitcher className="hidden sm:inline-flex" />
           <a
             href={whatsappChatUrl()}
             target="_blank"
             rel="noreferrer"
-            className="hidden sm:inline-flex items-center gap-1.5 whitespace-nowrap rounded-full bg-whatsapp px-3.5 py-2 text-sm font-semibold text-white hover:opacity-90 transition"
+            aria-label={t("nav.whatsapp")}
+            className="hidden sm:inline-flex items-center gap-1.5 whitespace-nowrap rounded-full bg-whatsapp px-3 py-2 text-sm font-semibold text-white hover:opacity-90 transition"
           >
-            <MessageCircle className="h-4 w-4" /> {t("nav.whatsapp")}
+            <MessageCircle className="h-4 w-4" />
+            <span className="hidden lg:inline">{t("nav.whatsapp")}</span>
           </a>
           <button
             className="p-2 rounded-md text-foreground hover:bg-secondary transition"
@@ -95,6 +99,7 @@ export function Navbar() {
           </button>
         </div>
       </div>
+
 
       {/* Mobile / tablet menu */}
       <div
